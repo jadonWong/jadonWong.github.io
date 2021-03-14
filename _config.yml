@@ -1,31 +1,48 @@
-# Site settings
-title: jadonWong
-description: jadonWong
-favicon: /assets/img/avatar.JPG
-baseurl:
-url: https://jadonWong.github.io
-rss_url:
+plugins: [jekyll-paginate]
 
-# Build settings
+permalink: /:categories/:title/
 
-highlight: true
-#highlighter: rouge
-
-timezone: Asia/Shanghai
-
+highlighter: rouge
 markdown: kramdown
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  input:  GFM
+  syntax_highlighter: rouge
 
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+
+paginate: 10
+paginate_path: "page/:num"
+baseurl: ""
+
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      styles : [highlight.css,gitment.css,post.css]
+      scripts : [gitment.js, post.js]
+
+
+
+title: "bit-ranger"
+email: sincerebravefight@gmail.com
+description: ""
+github:
+  username: bit-ranger
+swiftype:
+  searchId: iXZyPokVfxFaBTvi64Y6
+gitment:
+    repo: blog
+    client_id: a6fb73b3e790e234bab8
+    client_secret: cc10aaff53a03d05ab2ee002dbf401dd7627c7a3
+
+url: "https://bit-ranger.github.io/blog"
+imgrepo: "https://bit-ranger.github.io/blog/static/img"
+
+
+#url: "http://127.0.0.1:4000"
+#imgrepo: "http://127.0.0.1:4000/static/img"
+

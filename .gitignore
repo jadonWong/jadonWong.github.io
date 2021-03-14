@@ -1,5 +1,6 @@
 _site
 .sass-cache
 .idea
-resumecard.iml
-/*.iml
+.local
+.local/*
+.jekyll-cache
